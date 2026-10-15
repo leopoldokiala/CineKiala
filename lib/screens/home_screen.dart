@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../Components/custom_elevated_button_icon.dart';
 import '../theme/app_colors.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -66,16 +67,14 @@ class HomeScreen extends StatelessWidget {
                       const SizedBox(height: 12),
                       Row(
                         children: [
-                          ElevatedButton.icon(
+                          CustomElevatedButtonIcon(
                             style: ButtonStyle(
                               backgroundColor: WidgetStatePropertyAll(
                                 AppColors.yellow,
                               ),
                             ),
-                            onPressed: () {
-                              debugPrint('Ver detalhes');
-                            },
-                            icon: const Icon(
+                            onPressed: () {},
+                            icon: Icon(
                               Icons.play_arrow,
                               color: AppColors.black,
                             ),
@@ -84,17 +83,16 @@ class HomeScreen extends StatelessWidget {
                               style: TextStyle(color: AppColors.black),
                             ),
                           ),
+
                           const SizedBox(width: 8),
-                          ElevatedButton.icon(
+                          CustomElevatedButtonIcon(
                             style: ButtonStyle(
                               backgroundColor: WidgetStatePropertyAll(
                                 AppColors.softDarkBlue,
                               ),
                             ),
-                            onPressed: () {
-                              debugPrint('Adicionado a minha lista');
-                            },
-                            icon: const Icon(Icons.add, color: AppColors.white),
+                            onPressed: () {},
+                            icon: Icon(Icons.add, color: AppColors.white),
                             label: const Text(
                               'Minha Lista',
                               style: TextStyle(color: AppColors.white),
